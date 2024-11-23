@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/*63 line styling content2*/
+
+        *{
+            padding: 0%;
+            margin: 0%; 
+          box-sizing: border-box; 
+        } 
+        
+        /* Center the custom select */
+        body{ 
+         background-image: url('bg5.png');
+         background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+          display: flex; 
+          justify-content:end; 
+          align-items: center; 
+          height: 100vh; 
+        } 
+        .container{
+            height:100vh;
+            width:230vh;
+            display: block;
+            position: relative;
+        }
+        .sidebar1{
+            border-radius: 2rem;
+            background-color:white;
+            height: 87%;
+            width: 20%;
+            position: absolute;  
+        }
+        
+        .content1{
+            margin-top: 1%;
+            margin-left: 20.5%;
+            background-color: white;
+            height: 50%;
+            width: 30%;
+            position: absolute;
+        }
+        .content1 h3{
+          margin-bottom: 2%;
+          margin-left: 2%;
+          font-size: 25px;
+          color:  #04445F;
+        }
+        
+        .content2{
+            margin-left: 51%;
+            margin-top: 1%;
+            height: 50%;
+            width: 30%;
+            position: absolute;
+        }
+        .sidebar2{
+            margin-left: 80%;
+            background-color: white;
+            height: 80%;
+            width: 20%;
+            position: absolute;
+        }
+        
+        
+        /*navbar*/
+       
+        /*sidebar1*/
+        nav{
+            border-radius: 3rem 3rem 0rem 0rem;
+            background-color: white; 
+          }
+          .side_navbar{
+        
+            padding: 1px;
+            display: flex;
+            flex-direction: column;
+          }
+          .side_navbar span{
+            color: gray;
+            margin: 1rem 3rem;
+            font-size: 12px;
+          }
+          .side_navbar a{
+           
+            width: 100%;
+            padding: 0.8rem 3rem;
+            font-weight: 500;
+            font-size: 25px;
+            color: rgb(100, 100, 100);
+          }
+          .links{
+            margin-top: 5rem;
+            display: flex;
+            flex-direction: column;
+          }
+          .links a{
+            font-size: 25px;
+          }
+          .side_navbar a:hover{
+            background: rgb(235, 235, 235);
+          }
+          .side_navbar .active{
+            border-left: 2px solid rgb(100, 100, 100);
+          }
+          #LOGOUT-button {
+            border-radius: 1rem; 
+            height: 10%;
+            width: 50%;margin-left: 25%; background-color: red;
+            align-items:center ; color: white;
+          
+          }
+         #LOGOUT-button:hover {
+          background-color: blue;
+        
+        }
+        
+        /*content1*/
+        
+        .container .content1 button:hover {
+            background: white;
+          }
+        
+          /*content1---------*/
+        
+          /* Style the search field */
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+          }
+          
+          /* Style the submit button */
+          form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none; /* Prevent double borders */
+            cursor: pointer;
+          }
+          
+          form.example button:hover {
+            background: #0b7dda;
+          }
+          
+          /* Clear floats */
+          form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+        
+          
+        .options2 li:hover { 
+            background-color: #f0f0f0; 
+        } 
+        
+          /*sidebar1--------*/
+          .comment{
+            display: flex;
+        }
+          .comment.author-comment{
+            justify-content: flex-end;
+        }
+          .comment.author-comment .info{
+            order: 3;
+        }
+        
+        .comment.author-comment .avatar{
+            order: 2;
+        }
+        
+        .comment.author-comment p{
+            order: 1;
+        }
+        
+        /*content2--------------------------------------------------------------*/
+       
+        /* Custom select styles */
+        .main { 
+            
+            position: relative; 
+            width: 350px; 
+            height: 387px; 
+            background-color: white; 
+            border-radius: 20px; 
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 1); 
+            overflow: hidden; 
+        } 
+          
+        .selectBox { 
+            background-color: white; 
+            position: relative; 
+        } 
+          
+        .search-box { 
+            width: 100%; 
+            padding: 10px; 
+            border: none; 
+            border-bottom: 1px solid #ccc; 
+            outline: none; 
+            font-size: 16px; 
+        } 
+          
+        .center-text { 
+            text-align: center; 
+            color: #04445F; 
+        }  
+        .options { 
+            list-style: none; 
+            padding: 0; 
+            max-height: 250px; 
+            overflow-y: auto; 
+            border-bottom: 1px solid #ccc; 
+        } 
+        .options li { 
+            padding: 10px; 
+            cursor: pointer; 
+        }  
+        .options li:hover { 
+            background-color: #f0f0f0; 
+        }    
+        .selected-option { 
+            padding: 10px; 
+            cursor: pointer; 
+        }    
+        #clear-button { 
+            background-color: #04445F ; 
+            color: white; 
+            padding: 8px 16px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }  
+        #clear-button:hover { 
+            background-color: #147F93; 
+        } 
+        #Add-button { 
+          background-color: green ; 
+          color: white; 
+          padding: 8px 16px; 
+          border: none; 
+          border-radius: 4px; 
+          cursor: pointer; 
+        } 
+        #Add-button:hover { 
+          background-color: grey; 
+        }
+        
+        /*sidebar2------------*/
+        .sidebar2 .comment-section .write-new {
+            padding: 4%;
+            font-style: none; 
+        }
+        </style> 
+</head>
+<body>
+<div class="container">
+    <div class="sidebar1">
+       <nav >
+            <div class="side_navbar" style="height: 90%;padding-top:10%; ">
+                <img src="logo2.png" class="logo" width="50px" height="50px" style="margin-top: 10px; margin-left: 40%;">
+             <h2 style="text-align: center;">Hospital Name</h2>
+             <h3 style="text-align: center;">Designation</h3>
+              <a href="#" class="active">Dashboard</a>
+              <a href="#" class="active">Notification</a>
+             
+              <div class="links" style="margin-top: 90%">
+                <a href="#">Account</a>
+                <a href="#">Settings</a>
+                <a href="#">help & support</a>
+                <button id="LOGOUT-button">LOGOUT</button> 
+             </div>
+    </div>
+     </nav>
+
+</div>
+    <div class="content1" style="border-radius: 1.5rem; ">
+      <!-- The form search -->
+<form class="example" action="{{ url_for("auth.Dashboard")}}" method="get"> >
+  <input type="text" placeholder="Search.." name="search" >
+  <button type="submit"><img src="search.png"></button>
+</form>
+</div>
+    <div class="content2" >
+        <div class="main"> 
+            <h2 class="center-text"> 
+                Files & Documents
+            </h2> 
+              
+            <div class="selectBox"> 
+                <input type="text" class="search-box" 
+                    placeholder="Select desired data records " style="background-color: white "> 
+               
+                    <ul class="options"> 
+                        <li data-value="Receipt">Receipt</li> 
+                        <li data-value="Prescription">Prescription</li> 
+                        <li data-value="Blood reports">Blood reports</li> 
+                        <li data-value="X-ray">X-ray</li> 
+                   
+                        
+                        <li data-value="Receipt2">Receipt2</li> 
+                        <li data-value="Prescription2">Prescription2</li> 
+                        <li data-value="Blood reports2">Blood reports2</li> 
+                        <li data-value="X-ray2">X-ray2</li> 
+                  
+    
+                        <li data-value="Receipt3">Receipt3</li> 
+                        <li data-value="Prescription3">Prescription3</li> 
+                        <li data-value="Blood reports3">Blood reports3</li> 
+                        <li data-value="X-ray3">X-ray3</li> 
+                       
+                    </ul> 
+                </div> 
+            <div class="selected-option">Select an record option</div> 
+            <button id="clear-button">Clear Selection</button>
+            <button id="Add-button">Add</button> 
+        </div> 
+   </div>
+
+
+
+    <div class="sidebar2"  style="border-radius: 1.5rem; " >
+
+        <textarea name="" style="word-wrap: break-word;height: 95%; width:100%;border-style: none;"></textarea><br/> //Write data  
+    </div>
+</div>
+</div>
+<script src="script.js"></script> 
+ 
+<script>  
+const searchBox = document.querySelector('.search-box'); 
+const options = document.querySelectorAll('.options li'); 
+const selectedOption = document.querySelector('.selected-option'); 
+const clearButton = document.getElementById('clear-button'); 
+  
+// Check if search medical records present in menu list 
+searchBox.addEventListener('input', () => { 
+    const searchTerm = searchBox.value.toLowerCase(); 
+  
+    options.forEach(option => { 
+        const text = option.textContent.toLowerCase(); 
+        if (text.includes(searchTerm)) { 
+            option.style.display = 'block'; 
+        } else { 
+            option.style.display = 'none'; 
+        } 
+    }); 
+}); 
+  
+// Iterating and printing the selected medical records 
+for (const option of options) { 
+    option.addEventListener('click', () => { 
+        const value = option.getAttribute('data-value'); 
+        selectedOption.textContent =  
+            "You have chosen " + option.textContent; 
+        searchBox.value = ''; 
+        for (const opt of options) { 
+            opt.style.display = 'block'; 
+        } 
+    }); 
+} 
+  
+clearButton.addEventListener('click', function () { 
+    selectedOption.textContent = 'Select an option'; 
+    searchBox.value = ''; 
+    options.forEach(option => { 
+        option.style.display = 'block'; 
+    }); 
+});
+
+
+/*sidebar2-------*/
+
+    CKEDITOR.replace('editor1'); 
+    function getData() {  
+        //Get data written in first Editor   
+        var editor_data = CKEDITOR.instances['editor1'].getData();  
+        //Set data in Second Editor which is written in first Editor  
+        CKEDITOR.instances['editor2'].setData(editor_data);  
+    }  
+</script> 
+</body>
+</html>

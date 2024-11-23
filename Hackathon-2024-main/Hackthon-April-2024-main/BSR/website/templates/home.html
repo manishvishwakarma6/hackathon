@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bhartiya Swasthya Records(BSR)</title>
+  <link rel="stylesheet" type="icon" href="Logo.png">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            background-image: url("bg5.png");
+            background-size: cover;
+        }
+        @media(max-width: 600px){
+         body{
+             background-size: cover;
+             background-repeat: no-repeat;
+         }
+         }
+      .card{
+          width: 250px;
+          height: 250px;
+       margin: 45px;
+          border-radius: 35px;
+          overflow: hidden;
+       border: 2px solid black;
+       position: relative;
+       margin-top: 50px;
+
+
+      }
+      .card:hover .card-body{
+         right:0;
+
+      }
+      .card:hover{
+       box-shadow: 2px 2px  4px 4px #82e29f;
+      }
+      .card-img{
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 15px;
+          display: visible;
+          justify-content: center;
+      }
+      .card-body{
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+       position: absolute;
+       background: #04445F;
+       background-filter:blur(5px);
+       border-radius: 15px;
+       color: #fff;
+       padding: 30px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       right: -100%;
+       transition: 2s;
+      }
+      .card-title{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 15px;
+      }
+     
+      .card-info{
+          font-size: 16px;
+          line-height: 25px;
+          margin: 40px 0;
+          font-weight: 400;
+      }
+
+    </style>
+    
+</head>
+<body>
+    {% include "base.html" %}
+    <br><br><br><br><br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="card">
+    <img src="{{ url_for('static', filename='medical_record.jpg') }}" class="card-img" alt="...">
+  <div class="card-body">
+      <h1 class="card-title">Medical-Record</h1>
+ 
+      <p class="card-info">Digital medical records reduce the errors and records each data in deatail, Provides eassy access to patient history.</p>
+  </div>
+</div>
+ <div class="card">
+    <img src="{{ url_for('static', filename='emergency.png') }}" class="card-img" alt="..." >
+  <div class="card-body">
+      <h1 class="card-title">Emergency-Care</h1>
+  
+      <p class="card-info"> This feature of hospital management software allows patients to skip registration and other formalities and get the required treatment.
+  </p>
+  </div>
+</div>
+ <div class="card">
+    <img src="{{ url_for('static', filename='insurance.jpg') }}" class="card-img" alt="..." >
+  <div class="card-body">
+      <h1 class="card-title">Insurance</h1>
+  
+      <p class="card-info">Patients can use this feature to upload insurance documents, request treatment documents, health reports, prescription etc.</p>
+  </div>
+</div>
+</div>
+
+<div class="contact">
+    <h1>Bharatiya Swasthya Records(BSR)</h1>
+    
+</div>
+</body>
+</html>
